@@ -45,9 +45,9 @@ endfunction
 
 function! floaterm#buffer#get_config_dict(bufnr) abort
   let config = {}
-  for [key, val] in items(getbufvar(a:bufnr, ''))
+  for [key, Val] in items(getbufvar(a:bufnr, ''))
     if key =~ 'floaterm_'
-      let config[key[9:]] = val
+      let config[key[9:]] = Val
     endif
   endfor
   return config
